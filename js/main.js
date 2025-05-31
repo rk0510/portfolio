@@ -46,7 +46,30 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimations();
     initScrollSpy();
     highlightSectionTitlesOnScroll();
+
+    // Mobile Navigation Toggle
+    initMobileNavToggle();
 });
+
+// Mobile Navigation Toggle
+function initMobileNavToggle() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('nav');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    if (navToggle && nav && navLinks) {
+        navToggle.addEventListener('click', () => {
+            nav.classList.toggle('nav-open');
+        });
+
+        // Close menu when a nav link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('nav-open');
+            });
+        });
+    }
+}
 
 // Custom Cursor
 function initCustomCursor() {

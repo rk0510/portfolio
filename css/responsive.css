@@ -63,20 +63,53 @@
     nav {
         flex-direction: column;
         text-align: center;
+        position: relative;
     }
 
     .logo {
         margin-bottom: 15px;
     }
 
+    .nav-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--text-color);
+        font-size: 24px;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1001;
+    }
+
     .nav-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100vh;
+        background-color: var(--background-color);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 60px 20px 20px;
         flex-direction: column;
         align-items: center;
+        z-index: 1000;
+        transition: right 0.3s ease-in-out;
+        overflow-y: auto;
+        text-align: center;
     }
 
     .nav-links li {
         margin: 10px 0;
         margin-left: 0;
+    }
+
+    nav.nav-open .nav-links {
+        display: flex;
+        right: 0;
     }
 
     .hero {
@@ -169,4 +202,9 @@
     .tech-item {
         padding: 15px;
     }
+}
+
+/* Base styles (outside of media queries) */
+.nav-toggle {
+    display: none;
 } 
