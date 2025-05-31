@@ -1,0 +1,172 @@
+/* Responsive Styles */
+
+/* Large Screens (up to 1200px) */
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 95%;
+    }
+}
+
+/* Medium Screens (up to 992px) */
+@media screen and (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-content h2 {
+        font-size: 22px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-image, .about-text {
+        width: 100%;
+    }
+
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        margin-bottom: 40px;
+    }
+    
+    .bio-highlights {
+        flex-direction: column;
+    }
+    
+    .tech-stack-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .experience-timeline::before {
+        left: 80px;
+    }
+    
+    .experience-year {
+        width: 80px;
+    }
+    
+    .experience-content {
+        padding-left: 30px;
+    }
+}
+
+/* Small Screens (up to 768px) */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px 0;
+    }
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        margin-left: 0;
+    }
+
+    .hero {
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content h2 {
+        font-size: 20px;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-links {
+        flex-direction: column;
+    }
+    
+    .tech-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .experience-timeline::before {
+        display: none;
+    }
+    
+    .experience-item {
+        flex-direction: column;
+    }
+    
+    .experience-year {
+        width: 100%;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .experience-year::after {
+        display: none;
+    }
+    
+    .experience-content {
+        padding-left: 0;
+    }
+}
+
+/* Extra Small Screens (up to 576px) */
+@media screen and (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .hero-content h2 {
+        font-size: 18px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    section {
+        padding: 70px 0;
+    }
+    
+    .tech-items {
+        grid-template-columns: 1fr;
+    }
+    
+    .tech-item {
+        padding: 15px;
+    }
+} 
